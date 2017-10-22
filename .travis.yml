@@ -1,0 +1,13 @@
+language: c
+
+script: make
+
+deploy:
+  provider: releases
+  api-key:
+    - secure: "Z8BSjb7OFewQmUdWbupTHQKQlnY3s2nvGCjY7AsiAhA151ilZVYIr5C1hXo3JdRUjI9sLsdzV0I2UdwvTS4q7Y1sPTvubt4K6Pha49jnb6+mbC7bZJ44EnPNnVdnuqfh/rZsrh56e92KdiP/PAOmXsRlY2udgX1WQRWjlKzTzVHEbdlL/uvBFOPFt5gsjLaFu3rSU9hr/kHaX1/eqZP73w+MrWMDHsxAVYZg+I3DXpr2Mj+FV05ZBWRjKWGNBJk5i1clptVYFIUYIduCZhSX5JBvMlajduryDf0HAKqU3lqJmGrbERZnDvaDe/cNVG3jj27gOlWEKxZf3r1AVQgG5AerFU3QJgIOw/+dDe7C68EhuDlgb/hVjHFehje2RhMlCj0tQQQqaTaaDfntMlirJIdRbZFn1hnswHUkLW6vgo10Ly+MyNZJdZnR6sJmST8QhykfT+SfNIC7YWYY2bY297YXgeYRx+fcOrQpovC4SeGtxIfImobj+/nGkXTevrnvjDxV3RSoo96BU8gCDye/s9XOVfkZXM7Q5VJQ+LFsL63v452shE5LGLG/1Vb68Fyo4XvleOGvV/etzMFn2twyBC6Qmni3x5jfMXysCgb+2CKIICJyGTfQrlOQYAQVWzrFtnwFvjW4QwABzhpiY45PIkVXnVzp1u5hgtjAB/uz334="
+  file_glob: true
+  file: build/*
+  skip_cleanup: true
+  on:
+    tags: true
